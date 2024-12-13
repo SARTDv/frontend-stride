@@ -8,6 +8,9 @@ const StrideHeader = () => {
   
   return (
     <>
+    <div>
+      <ToastContainer position="top-center" autoClose={3000} hideProgressBar={true} />
+    </div>
     <div className="mobile-nav">
       <div className="amado-navbar-brand">
         <Link to="/home">
