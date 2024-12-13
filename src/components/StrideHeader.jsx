@@ -40,7 +40,7 @@ const StrideHeader = () => {
         <nav className="amado-nav">
           <ul>
             <li className="active"><a href="/home">Home</a></li>
-            <li><a href="/shop">Shop</a></li>
+            <li><Link to="/shop">Shop</Link>Shop</li>
             {isLoggedIn && (
                 <li><a href="/checkout">Checkout</a></li>
             )}
