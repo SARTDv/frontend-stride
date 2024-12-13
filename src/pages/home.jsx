@@ -37,14 +37,14 @@ const Home = () => {
             <div className="masonry-layout" style={{ columnCount: columns }}>
                 {images.map((image, index) => (
                     <div className="single-products-catagory clearfix"  key={index}>
-                        <a href="/shop">
-                            <img src={image.src} alt={image.alt} />
+                        <Link to="/shop">
+                          <img src={image.src} alt={image.alt} />
                             <div className="hover-content">
                             <div className="line"></div>
                             <p>From {image.price}</p>
                             <h4>{image.title}</h4>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 ))}
             </div>

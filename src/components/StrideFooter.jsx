@@ -11,7 +11,7 @@ const StrideFooter = () => {
                 <div className="col-12 col-lg-4">
                     <div className="single_widget_area">                        
                         <div className="footer-logo mr-50">
-                            <a href="/home"><img src="img/core-img/logo2.png" alt=""/></a>
+                         <Link to="/home"><img src="img/core-img/logo2.png" alt=""/></Link>
                         </div>
                         <p className="copywrite"> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i className="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> & Re-distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a></p>
                     </div>
@@ -26,18 +26,18 @@ const StrideFooter = () => {
                                 <div className="collapse navbar-collapse" id="footerNavContent">
                                     <ul className="navbar-nav ml-auto">
                                         <li className="nav-item active">
-                                            <a className="nav-link" href="/home">Home</a>
+                                            <Link to="/home" className="nav-link">Home</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <a className="nav-link" href="/shop">Shop</a>
+                                            <Link to="/shop" className="nav-link">Shop</Link>
                                         </li>
                                         {isLoggedIn && (
                                             <>
                                             <li className="nav-item">
-                                                <a className="nav-link" href="/cart">Cart</a>
+                                                <Link to="/cart" className="nav-link">Cart</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <a className="nav-link" href="/checkout">Checkout</a>
+                                                <Link to="/checkout" className="nav-link">Checkout</Link>
                                             </li>
                                             </>
                                         )}

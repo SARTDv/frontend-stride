@@ -69,7 +69,7 @@ const ProductDetails = () => {
           <div className="col-12">
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb mt-50">
-                <li className="breadcrumb-item"><a href="/shop">Shop</a></li>
+                <li className="breadcrumb-item"><Link to="/shop">Shop</Link></li>
                 <li className="breadcrumb-item"><a>{product.category}</a></li>
                 <li className="breadcrumb-item active" aria-current="page">{product.name}</li>
               </ol>
@@ -89,9 +89,7 @@ const ProductDetails = () => {
               <div className="product-meta-data">
                 <div className="line"></div>
                 <p className="product-price">${product.price}</p>
-                <a href="/productDetails">
-                  <h6>{product.name}</h6>
-                </a>
+                <Link to="/productDetails"><h6>{product.name}</h6></Link>
                 <div className="ratings-review mb-15 d-flex align-items-center justify-content-between">
                   <div className="ratings">
                     <i className="fa fa-star" aria-hidden="true"></i>

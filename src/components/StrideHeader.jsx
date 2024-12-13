@@ -10,9 +10,9 @@ const StrideHeader = () => {
     <>
     <div className="mobile-nav">
       <div className="amado-navbar-brand">
-        <a href="/home">
-          <img src="img/core-img/logo.png" alt="Logo" />
-        </a>
+        <Link to="/home">
+        <img src="img/core-img/logo.png" alt="Logo" />
+        </Link>
         </div>
           {/* Navbar Toggler*/}
           <div className="amado-navbar-toggler" onClick={() => setOptions(!options)}>
@@ -25,9 +25,7 @@ const StrideHeader = () => {
         </div>
         {/* Logo */}
         <div className="logo">
-          <a href="/home">
-            <img src="img/core-img/logo.png" alt="Logo" />
-          </a>
+          <Link to="/home"><img src="img/core-img/logo.png" alt="Logo" /></Link>
         </div>
         {/* Button Group */}
         {!isLoggedIn && (
@@ -39,10 +37,10 @@ const StrideHeader = () => {
         {/* Amado Nav */}
         <nav className="amado-nav">
           <ul>
-            <li className="active"><a href="/home">Home</a></li>
-            <li><Link to="/shop">Shop</Link>Shop</li>
+            <li className="active"><Link to="/home">Home</Link></li>
+            <li><Link to="/shop">Shop</Link></li>
             {isLoggedIn && (
-                <li><a href="/checkout">Checkout</a></li>
+                <li><Link to="/checkout">Checkout</Link></li>
             )}
           </ul>
         </nav>
@@ -50,30 +48,30 @@ const StrideHeader = () => {
         <div className="cart-fav-search mb-30">
           {isLoggedIn && (
                 <>
-                    <a href="/cart" className="cart-nav">
+                    <Link to="/cart" className="cart-nav">
                         <img src="img/core-img/cart.png" alt="Cart" /> Cart 
-                    </a>
-                    <a href="/MyOrders" className="Acc-nav">
-                    <img src="img/core-img/package-open.png" alt="My Orders" /> My Orders
-                    </a>
-                    <a href="/myAccount" className="Acc-nav">
+                    </Link>
+                    <Link to="/MyOrders" className="Acc-nav">
+                        <img src="img/core-img/package-open.png" alt="My Orders" /> My Orders
+                    </Link>
+                    <Link to="/myAccount" className="Acc-nav">
                         <img src="img/core-img/account.png" alt="My Account" /> My Account
-                    </a>
+                    </Link>
                 </>
           )}
         </div>
         {/* Social Button */}
         <div className="social-info d-flex justify-content-between">
-          <a href="#">
+          <a>
             <i className="fa fa-pinterest" aria-hidden="true"></i>
           </a>
-          <a href="#">
+          <a>
             <i className="fa fa-instagram" aria-hidden="true"></i>
           </a>
-          <a href="#">
+          <a>
             <i className="fa fa-facebook" aria-hidden="true"></i>
           </a>
-          <a href="#">
+          <a>
             <i className="fa fa-twitter" aria-hidden="true"></i>
           </a>
         </div>

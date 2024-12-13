@@ -113,7 +113,7 @@ const Cart = () => {
                                                     />
                                                 </div>
 
-                                                <div className="cart ms-3">
+                                                <div className="cart ms-3">                                                    
                                                     <a
                                                     data-toggle="tooltip"
                                                     data-placement="left"
