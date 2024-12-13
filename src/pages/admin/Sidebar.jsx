@@ -44,7 +44,7 @@ export function Sidebar({ activeSection, onNavigate, isOpen }) {
         <button
             className={styles["btn-primary"]}
           onClick={() => {
-            window.location.href = "/home";
+            navigate('/home');
         }}
         >
             <House size={20}/>
