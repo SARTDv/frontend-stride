@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
+import { Link, useNavigate } from "react-router-dom";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState(null);

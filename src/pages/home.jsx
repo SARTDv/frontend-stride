@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [columns, setColumns] = useState(3); // Número inicial de columnas

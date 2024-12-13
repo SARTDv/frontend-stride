@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from './AuthToken';
+import { Link, useNavigate } from "react-router-dom";
 
 const StrideFooter = () => {
     const { isLoggedIn } = useContext(AuthContext);
