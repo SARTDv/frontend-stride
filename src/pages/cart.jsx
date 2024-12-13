@@ -11,7 +11,7 @@ const Cart = () => {
             const token_key = localStorage.getItem('token');
 
             try {
-                const response = await axios.post('http://127.0.0.1:8000/api/cart/Showcart/', 
+                const response = await axios.post('https://backend-stride.onrender.com/api/cart/Showcart/', 
                     { token_key: token_key }
                 );
                 setCartItems(response.data);
@@ -26,7 +26,7 @@ const Cart = () => {
     const Remove = async (productId) => {
     
         try {
-            const response = await axios.post('http://127.0.0.1:8000/api/cart/Remove/', {
+            const response = await axios.post('https://backend-stride.onrender.com/api/cart/Remove/', {
                 product_id: productId,
             });
     
@@ -46,7 +46,7 @@ const Cart = () => {
         try {
             // Verificar si hay órdenes pendientes
             const checkResponse = await axios.get(
-                "http://127.0.0.1:8000/api/orders/check-pending/"
+                "https://backend-stride.onrender.com/api/orders/check-pending/"
             );
     
             if (checkResponse.data.has_pending) {
@@ -56,7 +56,7 @@ const Cart = () => {
     
             // Crear una nueva orden
             const createResponse = await axios.post(
-                "http://127.0.0.1:8000/api/orders/create/"
+                "https://backend-stride.onrender.com/api/orders/create/"
             );
     
             toast.success("Orden creada exitosamente: " + createResponse.data.message);

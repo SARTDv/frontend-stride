@@ -11,7 +11,7 @@ const ProductDetails = () => {
 
     if (productId) {
       axios
-        .get(`http://localhost:8000/api/products/details/${productId}/`) // Cambia la URL según tu API
+        .get(`https://backend-stride.onrender.com/api/products/details/${productId}/`)
         .then((response) => {
           setProduct(response.data);
           setLoading(false);
@@ -37,7 +37,7 @@ const ProductDetails = () => {
     }
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/cart/addToCart/', {
+      const response = await axios.post('https://backend-stride.onrender.com/api/cart/addToCart/', {
         token_key: token,
         product_id: focusp,
         quantity: quantity,

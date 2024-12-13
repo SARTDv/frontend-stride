@@ -12,7 +12,7 @@ const OrderPage = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/orders/orders/');
+        const response = await axios.get('https://backend-stride.onrender.com/api/orders/orders/');
         setOrders(response.data);
       } catch (err) {
         setError(err.response ? err.response.data.detail : 'Failed to fetch orders');
@@ -27,7 +27,7 @@ const OrderPage = () => {
   // Marcar como entregada
   const handleMarkAsDelivered = async (orderId) => {
     try {
-      const response = await axios.patch(`http://localhost:8000/api/orders/orders/${orderId}/`, {
+      const response = await axios.patch(`https://backend-stride.onrender.com/api/orders/orders/${orderId}/`, {
         status: 'completed',
       });
       // Actualiza el estado local de la orden
@@ -43,7 +43,7 @@ const OrderPage = () => {
   
   const handleMarkAsCanceled = async (orderId) => {
     try {
-      const response = await axios.patch(`http://localhost:8000/api/orders/orders/${orderId}/`, {
+      const response = await axios.patch(`https://backend-stride.onrender.com/api/orders/orders/${orderId}/`, {
         status: 'cancelled',
       });
       // Actualiza el estado local de la orden

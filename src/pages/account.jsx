@@ -25,7 +25,7 @@ function AccountPage() {
     // Realizar la solicitud al backend
     const fetchUserData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/accounts/user-detail/");
+        const response = await axios.get("https://backend-stride.onrender.com/api/accounts/user-detail/");
         setUserData(response.data);
         setIsSuperuser(response.data.is_staff); // Usar is_staff como indicador de superusuario
       } catch (error) {

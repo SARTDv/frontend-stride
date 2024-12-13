@@ -10,7 +10,7 @@ export function UserOrders() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/orders/users_orders/', {
+        const response = await axios.get('https://backend-stride.onrender.com/api/orders/users_orders/', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}` // Token de autenticación
           }

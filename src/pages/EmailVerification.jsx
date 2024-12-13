@@ -28,7 +28,7 @@ function EmailVerification() {
                 }
 
                 // Realizar petición al backend
-                const response = await axios.get(`http://localhost:8000/api/accounts/verify-email/?token=${token}`);
+                const response = await axios.get(`https://backend-stride.onrender.com/api/accounts/verify-email/?token=${token}`);
                 
                 // Actualizar estado de verificación
                 setStatus({

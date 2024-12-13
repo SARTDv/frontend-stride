@@ -25,7 +25,7 @@ const Shop = () => {
         setError(null); // Resetea el estado de error antes de realizar la solicitud
         try {
             const response = await fetch(
-                `http://127.0.0.1:8000/api/products/search/?category=${activeCategory}&keyword=${keyword}&min_price=${values[0]}&max_price=${values[1]}&page=${page}`
+                `https://backend-stride.onrender.com/api/products/search/?category=${activeCategory}&keyword=${keyword}&min_price=${values[0]}&max_price=${values[1]}&page=${page}`
             );
             if (!response.ok) {
                 throw new Error("Error al obtener productos");
@@ -53,7 +53,7 @@ const Shop = () => {
         setError(null);
         try {
             const response = await fetch(
-                `http://127.0.0.1:8000/api/products/search/?category=${activeCategory}&keyword=${palabra}&min_price=${values[0]}&max_price=${values[1]}`
+                `https://backend-stride.onrender.com/api/products/search/?category=${activeCategory}&keyword=${palabra}&min_price=${values[0]}&max_price=${values[1]}`
             );
             if (!response.ok) {
                 throw new Error("Error al realizar la búsqueda");
@@ -77,7 +77,7 @@ const Shop = () => {
         setError(null);
         try {
             const response = await fetch(
-                `http://127.0.0.1:8000/api/products/search/?category=${category}&keyword=${keyword}&min_price=${values[0]}&max_price=${values[1]}`
+                `https://backend-stride.onrender.com/api/products/search/?category=${category}&keyword=${keyword}&min_price=${values[0]}&max_price=${values[1]}`
             );
             if (!response.ok) {
                 throw new Error("Error al realizar la búsqueda");
@@ -100,7 +100,7 @@ const Shop = () => {
             return;
         }
         try {
-            const response = await axios.post('http://127.0.0.1:8000/api/cart/addToCart/', 
+            const response = await axios.post('https://backend-stride.onrender.com/api/cart/addToCart/', 
                 { token_key: token, product_id: Id }
             );
             toast.success('Succesfully added!', { autoClose: true });

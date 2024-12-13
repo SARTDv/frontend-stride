@@ -11,7 +11,7 @@ export function ProductsManager() {
 
   useEffect(() => {
     // Obtener productos al cargar el componente
-    axios.get('http://127.0.0.1:8000/api/products/admin/products/')
+    axios.get('https://backend-stride.onrender.com/api/products/admin/products/')
       .then(response => {
         setProducts(response.data);
       })
@@ -23,7 +23,7 @@ export function ProductsManager() {
   const handleSaveProduct = (product) => {
     if (editingProduct) {
       // Actualizar el producto
-      axios.put(`http://127.0.0.1:8000/api/products/admin/products/${product.id}/`, product)
+      axios.put(`https://backend-stride.onrender.comapi/products/admin/products/${product.id}/`, product)
         .then(response => {
           setProducts(products.map(p => p.id === product.id ? response.data : p));
           setShowForm(false);
@@ -34,7 +34,7 @@ export function ProductsManager() {
         });
     } else {
       // Crear un nuevo producto
-      axios.post('http://127.0.0.1:8000/api/products/admin/products/', product)
+      axios.post('https://backend-stride.onrender.com/api/products/admin/products/', product)
         .then(response => {
           setProducts([...products, response.data]);
           setShowForm(false);
@@ -52,7 +52,7 @@ export function ProductsManager() {
   };
 
   const handleDelete = (productId) => {
-    axios.delete(`http://127.0.0.1:8000/api/products/admin/products/${productId}/`)
+    axios.delete(`https://backend-stride.onrender.com/api/products/admin/products/${productId}/`)
       .then(() => {
         setProducts(products.filter(p => p.id !== productId));
       })

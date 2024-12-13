@@ -55,7 +55,7 @@ const Checkout = () => {
     
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/orders/process-payment/",
+        "https://backend-stride.onrender.com/api/orders/process-payment/",
         { ship_info: shipInfo }
       );
       toast.success(response.data.message);
@@ -70,7 +70,7 @@ const Checkout = () => {
   useEffect(() => {
     const checkPendingOrders = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/orders/check-pending/');
+        const response = await axios.get('https://backend-stride.onrender.com/api/orders/check-pending/');
         setHasPendingOrders(response.data.has_pending);
 
         if (response.data.has_pending) {
