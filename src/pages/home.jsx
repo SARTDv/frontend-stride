@@ -5,15 +5,15 @@ const Home = () => {
   const [columns, setColumns] = useState(3); // Número inicial de columnas
 
   const images = [
-    { src: 'img/bg-img/1.jpg', alt: 'Test Image 1', price: '$180', title: 'Test Image 1' },
-    { src: 'img/bg-img/5.jpg', alt: 'Test Image 5', price: '$18', title: 'Test Image 5' },
-    { src: 'img/bg-img/8.jpg', alt: 'Test Image 8', price: '$318', title: 'Test Image 8' },
-    { src: 'img/bg-img/2.jpg', alt: 'Test Image 2', price: '$180', title: 'Test Image 2' },
-    { src: 'img/bg-img/6.jpg', alt: 'Test Image 6', price: '$320', title: 'Test Image 6' },
-    { src: 'img/bg-img/9.jpg', alt: 'Test Image 9', price: '$318', title: 'Test Image 9' },
-    { src: 'img/bg-img/3.jpg', alt: 'Test Image 3', price: '$180', title: 'Test Image 3' },
-    { src: 'img/bg-img/4.jpg', alt: 'Test Image 4', price: '$180', title: 'Test Image 4' },
-    { src: 'img/bg-img/7.jpg', alt: 'Test Image 7', price: '$318', title: 'Test Image 7' },
+    { src: 'img/bg-img/1.jpg', alt: 'Test Image 1', price: '$180', title: 'Deporte' },
+    { src: 'img/bg-img/5.jpg', alt: 'Test Image 5', price: '$18', title: 'Iconico' },
+    { src: 'img/bg-img/8.jpg', alt: 'Test Image 8', price: '$318', title: 'Porta tn' },
+    { src: 'img/bg-img/2.jpg', alt: 'Test Image 2', price: '$180', title: 'Casual' },
+    { src: 'img/bg-img/6.jpg', alt: 'Test Image 6', price: '$320', title: 'Clasico' },
+    { src: 'img/bg-img/9.jpg', alt: 'Test Image 9', price: '$318', title: 'Basico' },
+    { src: 'img/bg-img/3.jpg', alt: 'Test Image 3', price: '$180', title: 'Retro' },
+    { src: 'img/bg-img/4.jpg', alt: 'Test Image 4', price: '$180', title: 'Corredores' },
+    { src: 'img/bg-img/7.jpg', alt: 'Test Image 7', price: '$318', title: 'Estilo' },
   ];
 
   // Función para actualizar el número de columnas según el tamaño de la ventana
