@@ -97,6 +97,9 @@ const Checkout = () => {
 
   return (
     <div className="cart-table-area section-padding-100">
+      <div>
+          <ToastContainer position="top-center" autoClose={3000} hideProgressBar={true} />
+      </div>
       <div className="container-fluid">
         <div className="row">
           <div className="col-12 col-lg-8">
