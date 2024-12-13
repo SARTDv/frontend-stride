@@ -21,6 +21,7 @@ function EmailVerification() {
             try {
                 // Extraer token de la URL
                 const token = new URLSearchParams(location.search).get('token');
+                console.log(token)
                 
                 // Validar que el token exista
                 if (!token) {
