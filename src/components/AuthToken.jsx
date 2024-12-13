@@ -20,7 +20,6 @@ export const AuthProvider = ({ children }) => {
     return (
         <AuthContext.Provider value={{ isLoggedIn, handleLogout, setIsLoggedIn}}>
             <div>
-                {/* Alertas de las mas alta calidddddaa */}
                 <ToastContainer position="top-center" autoClose={3000} hideProgressBar={true} />
             </div>
             {children}

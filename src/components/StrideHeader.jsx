@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from './AuthToken';
+import { toast, ToastContainer } from 'react-toastify';
 
 const StrideHeader = () => {
   const { isLoggedIn } = useContext(AuthContext);
